@@ -3,6 +3,7 @@ import "../../styles/home.css";
 import {Character} from "./character.js";
 //import {Character} from "./character.js"
 import {Characters} from "./characters.js"
+import { Planets } from "./planets.js";
 
 export const Home = () => {
 	return (
@@ -10,5 +11,6 @@ export const Home = () => {
 		<h1>Character</h1>
 		<Characters />
 		<h1>Planets</h1>
+		< Planets />
 	</div> )
 };
