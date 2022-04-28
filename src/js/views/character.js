@@ -7,11 +7,12 @@ export const Character = (props) => {
     const { store, actions } = useContext(Context);
     const fetchCharacter = "https://www.swapi.tech/api/"
     useEffect(() => {
-        actions.loadCharacters()
+        actions.loadCharacter(id)
     }, [])
     console.log(store)
+    let id = props.match.params.id
     return (
         <div>
-           <p>hi</p>
+           {!store.character ? <h1>loading</h1> : <p>{store.character.description}</p>}
         </div>)
 };
