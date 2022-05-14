@@ -39,23 +39,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 							console.log(data)
 							setStore({character:data.result})})
 						.catch(err => console.error(err))
-					},
-			},
-			loadPlanets: () => {
-				fetch("https://www.swapi.tech/api/planets")
-					.then(res => res.json())
-					.then(data => { console.log(data)
-						 setStore({planets:data.results})})
-					.catch(err => console.error(err))
-			},
-			loadPlanet: (id) => {
-				fetch(`https://www.swapi.tech/api/planets/${id}`)
-					.then(res => res.json())
-					.then(data => { console.log(data)
-						 setStore({planet:data.result})})
-					.catch(err => console.error(err))
-			},
-		};
+				},
+				loadPlanets: () => {
+					fetch("https://www.swapi.tech/api/planets")
+						.then(res => res.json())
+						.then(data => { console.log(data)
+							 setStore({planets:data.results})})
+						.catch(err => console.error(err))
+				},
+				loadPlanet: (id) => {
+					fetch(`https://www.swapi.tech/api/planets/${id}`)
+						.then(res => res.json())
+						.then(data => { console.log(data)
+							 setStore({planet:data.result})})
+						.catch(err => console.error(err))
+				}
+		}
 	};
 			// changeColor: (index, color) => {
 			// 	//get the store
@@ -71,5 +70,5 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	//reset the global store
 			// 	setStore({ demo: demo });
 			// }
-
+}
 export default getState;

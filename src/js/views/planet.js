@@ -6,10 +6,10 @@ export const Planet = (props) => {
     console.log(props)
     const { store, actions } = useContext(Context);
     useEffect(() => {
-        actions.loadPlanet(id2)
+        actions.loadPlanet(id)
     }, [])
     console.log(store)
-    let id2 = props.match.params.id
+    let id = props.match.params.id
     return (
         <div>
            {!store.planet ? <h1>loading</h1> : <p>{store.planet.description}</p>}

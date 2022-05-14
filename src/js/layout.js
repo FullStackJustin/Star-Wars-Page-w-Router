@@ -19,7 +19,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div id="BlueBoxIthink">
+		<div id="homeLayout" >
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />

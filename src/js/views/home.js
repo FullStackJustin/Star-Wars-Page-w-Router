@@ -7,10 +7,10 @@ import { Planets } from "./planets.js";
 
 export const Home = () => {
 	return (
-	<div className="text-center mt-5">
-		<h1>Character</h1>
+	<div id="background" className="text-center mt-5">
+		<h1 style={{color: 'white'}}>Characters</h1>
 		<Characters />
-		<h1>Planets</h1>
+		<h1 style={{color: 'white'}}>Planets</h1>
 		< Planets />
 	</div> )
 };
